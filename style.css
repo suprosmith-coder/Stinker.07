@@ -1,88 +1,154 @@
-.dashboard-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    max-width: 1400px;
-    gap: 40px;
+:root {
+    --bg-black: #08080c;
+    --panel-purple: #1a1025;
+    --cyan-trim: #00ffff;
+    --neon-purple: #7000ff;
+    --text-dim: #a0a0c0;
 }
 
-/* Sidebars */
-.left-sidebar, .right-sidebar {
-    flex: 1;
+body {
+    background-color: #050505;
+    color: white;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Main UI Frame */
+.ui-frame {
+    width: 90vw;
+    height: 85vh;
+    background: var(--bg-black);
+    border: 2px solid var(--cyan-trim);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1), inset 0 0 20px rgba(0, 0, 0, 1);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.sidebar-box, .right-sidebar {
-    border: 2px solid var(--neon-pink);
     padding: 20px;
-    background: rgba(255, 0, 255, 0.05);
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    position: relative;
 }
 
-/* Social Icons */
-.social-icon {
+/* Header & Footer */
+.ui-header, .ui-footer {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    margin-bottom: 10px;
-    border: 1px solid var(--neon-cyan);
-    color: var(--neon-cyan);
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.social-icon:hover:not(.disabled) {
-    background: var(--neon-cyan);
-    color: #000;
-    box-shadow: 0 0 20px var(--neon-cyan);
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    border-color: #555;
-    color: #555;
-}
-
-/* Right Sidebar Videos */
-.video-card {
-    border: 1px solid var(--neon-pink);
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.video-card:hover {
-    transform: translateX(-5px);
-    box-shadow: -5px 0 15px var(--neon-pink);
-}
-
-/* Center Profile Styling */
-.center-profile {
-    flex: 1.5;
-    text-align: center;
-}
-
-.live-status {
-    color: #0f0;
+    justify-content: space-between;
+    padding: 10px 20px;
     font-size: 0.8rem;
-    letter-spacing: 2px;
+    color: var(--cyan-trim);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    margin-bottom: 20px;
 }
 
-.dot {
-    height: 8px;
-    width: 8px;
-    background-color: #0f0;
+.ui-footer { border-bottom: none; border-top: 1px solid rgba(0, 255, 255, 0.2); margin-top: 20px; }
+
+mark { background: none; color: white; border: 1px solid var(--neon-purple); padding: 2px 8px; }
+
+/* Panels */
+.dashboard-wrapper {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.panel {
+    background: var(--panel-purple);
+    border-radius: 10px;
+    border: 1px solid rgba(112, 0, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.side-panel { flex: 1; }
+.center-panel { flex: 1.5; justify-content: center; align-items: center; position: relative; }
+
+.panel-header {
+    background: rgba(112, 0, 255, 0.2);
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--text-dim);
+    border-bottom: 1px solid rgba(112, 0, 255, 0.3);
+}
+
+.panel-header i { color: var(--neon-purple); margin-right: 5px; font-size: 0.5rem; }
+
+/* UI Buttons & Links */
+.ui-button {
+    display: block;
+    background: #000;
+    border: 1px solid var(--neon-purple);
+    color: white;
+    padding: 12px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.ui-button:hover:not(.disabled) {
+    background: var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Center Profile with Targeting UI */
+.profile-hex {
+    width: 180px;
+    height: 180px;
+    border: 4px solid var(--neon-purple);
     border-radius: 50%;
-    display: inline-block;
-    animation: blink 1s infinite;
+    padding: 10px;
+    box-shadow: 0 0 20px var(--neon-purple);
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
+.profile-hex img { width: 100%; border-radius: 50%; }
+
+.glitch-text {
+    font-size: 2.5rem;
+    color: var(--cyan-trim);
+    text-shadow: 0 0 10px var(--cyan-trim);
+    letter-spacing: 4px;
+    margin: 20px 0;
 }
+
+/* Video Cards */
+.video-card {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.video-card:hover { background: rgba(0, 255, 255, 0.05); }
+
+.video-card p { font-size: 0.8rem; margin: 0; color: var(--text-dim); }
+
+/* Progress Bar */
+.progress-container {
+    height: 6px;
+    background: #000;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--cyan-trim);
+    box-shadow: 0 0 10px var(--cyan-trim);
+}
+
+.mt { margin-top: 20px; }
+
+.pulse-dot {
+    height: 8px; width: 8px; background: #0f0; border-radius: 50%; display: inline-block;
+    animation: pulse 1.5s infinite; margin-right: 5px;
+}
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
