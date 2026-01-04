@@ -1,73 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>07STINKY Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <nav>
-            <button class="nav-item">HOME</button>
-            <button class="nav-item active">ABOUT</button>
-            <button class="nav-item">VIDEOS</button>
-            <button class="nav-item">FORUMS</button>
-            <button class="nav-item">CONTACT</button>
-        </nav>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        <main class="content-grid">
-            <section class="video-sidebar">
-                <h3>LATEST VIDEOS</h3>
-                <div class="video-card">
-                    <div class="thumb"></div>
-                    <p>If Cars Had A Discord</p>
-                </div>
-                <div class="video-card">
-                    <div class="thumb"></div>
-                    <p>If Planets Had A Discord</p>
-                </div>
-                <div class="video-card">
-                    <div class="thumb"></div>
-                    <p>If Countries Had A Discord</p>
-                </div>
-            </section>
+<div class="dashboard-wrapper">
+    <aside class="left-sidebar">
+        <div class="sidebar-box">
+            <h4>CONNECT</h4>
+            <a href="https://youtube.com/@07stinky" target="_blank" class="social-icon youtube">
+                <i class="fab fa-youtube"></i>
+                <span>CHANNEL</span>
+            </a>
+            <div class="social-icon discord disabled">
+                <i class="fab fa-discord"></i>
+                <span>COMING SOON</span>
+            </div>
+        </div>
+    </aside>
 
-            <section class="profile-section">
-                <div class="profile-circle">
-                    <img src="https://via.placeholder.com/150" alt="Avatar">
-                </div>
-                <h1 class="username">07STINKY</h1>
+    <main class="center-profile">
+        <div class="profile-circle">
+            <img src="https://yt3.ggpht.com/vihuXdDJHr6EnrLWCcsjSxWraUdkKwjcnqQ-EFM4-rgSR8hJswOZChmCkNbuMti9820lbzy8=s176-c-k-c0x00ffffff-no-rj" alt="07Stinky Avatar">
+        </div>
+        <h1 class="username">07STINKY</h1>
+        <div class="live-status">
+            <span class="dot"></span> LIVE DATA TRACKING
+        </div>
+    </main>
 
-                <div class="bottom-widgets">
-                    <div class="widget chat">
-                        <h4>COMMUNITY CHAT</h4>
-                        <div class="chat-placeholder">
-                            <p>> User1: Hello!</p>
-                            <p>> User2: Nice video.</p>
-                            <p>> User3: Glow is cool.</p>
-                        </div>
-                    </div>
-                    <div class="widget analytics">
-                        <h4>YOUTUBE ANALYTICS</h4>
-                        <div class="stat">
-                            <span>SUBSCRIBERS</span>
-                            <div class="progress-bar"><div class="fill" style="width: 80%;"></div></div>
-                            <span class="val">1.2M</span>
-                        </div>
-                        <div class="stat">
-                            <span>VIEWS (LAST 30 DAYS)</span>
-                            <div class="progress-bar"><div class="fill" style="width: 45%;"></div></div>
-                            <span class="val">5.8M</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 07STINKY. ALL RIGHTS RESERVED.</p>
-        </footer>
-    </div>
-</body>
-</html>
+    <aside class="right-sidebar" id="video-list">
+        <h4>RECENT UPLOADS</h4>
+        <div class="video-placeholder">Fetching...</div>
+        <div class="video-placeholder">Fetching...</div>
+        <div class="video-placeholder">Fetching...</div>
+    </aside>
+</div>
