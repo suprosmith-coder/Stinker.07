@@ -1,69 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>07STINKY // V1.2</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div class="ui-frame">
-        <header class="ui-header">
-            <div class="logo"><i class="fas fa-microchip"></i> 07STINKY_UI // V1.2</div>
-            <div class="header-stats">
-                <span>SUBS: <mark id="sub-header">0</mark></span>
-                <span>PING: <mark>27ms</mark></span>
-            </div>
-        </header>
-
-        <div class="dashboard-wrapper">
-            <aside class="panel side-panel">
-                <div class="panel-header"><i class="fas fa-circle"></i> CONNECT</div>
-                <div class="panel-body">
-                    <a href="https://youtube.com/@07stinky" target="_blank" class="ui-button">
-                        <i class="fab fa-youtube"></i> YouTube
-                    </a>
-                    <div class="ui-button disabled">
-                        <i class="fab fa-discord"></i> COMING SOON
-                    </div>
-                </div>
-
-                <div class="panel-header mt"><i class="fas fa-circle"></i> ANALYTICS</div>
-                <div class="panel-body">
-                    <p class="stat-label">SUBSCRIBERS</p>
-                    <div class="progress-container">
-                        <div class="progress-fill" id="sub-bar" style="width: 45%;"></div>
-                    </div>
-                    <p class="stat-value" id="sub-count">0</p>
-                </div>
-            </aside>
-
-            <main class="panel center-panel">
-                <div class="target-corners">
-                    <div class="profile-hex">
-                        <img src="https://via.placeholder.com/150" alt="Avatar">
-                    </div>
-                </div>
-                <h1 class="glitch-text">07STINKY</h1>
-                <div class="status-indicator">
-                    <span class="pulse-dot"></span> LIVE DATA TRACKING
-                </div>
-            </main>
-
-            <aside class="panel side-panel">
-                <div class="panel-header"><i class="fas fa-circle"></i> RECENT UPLOADS</div>
-                <div class="panel-body scrollable" id="video-list">
-                    <div class="loading-text">Fetching data...</div>
-                </div>
-            </aside>
+<div class="ui-frame">
+    <header class="ui-header">
+        <div class="logo"><i class="fas fa-microchip"></i> 07STINKY_UI // V1.2</div>
+        <div class="header-stats">
+            <span>SUBS: <mark id="sub-header">0</mark></span>
+            <span>PING: <mark>27ms</mark></span>
         </div>
+    </header>
 
-        <footer class="ui-footer">
-            <span>C/SYSTEM/STATUS > ONLINE</span>
-            <span>© 2026 07STINKY. ALL RIGHTS RESERVED.</span>
-        </footer>
+    <div class="dashboard-wrapper">
+        <aside class="panel side-panel">
+            <div class="panel-header"><i class="fas fa-circle"></i> SOCIALS</div>
+            <div class="panel-body">
+                <a href="https://youtube.com/@07stinky" target="_blank" class="ui-button">
+                    <i class="fab fa-youtube"></i> YouTube Channel
+                </a>
+            </div>
+
+            <div class="panel-header mt"><i class="fas fa-circle"></i> LIVE STATS</div>
+            <div class="panel-body">
+                <p class="stat-label">SUBSCRIBERS</p>
+                <div class="progress-container">
+                    <div class="progress-fill" id="sub-bar" style="width: 0%;"></div>
+                </div>
+                <p class="stat-value" id="sub-count">0</p>
+            </div>
+        </aside>
+
+        <main class="panel center-panel">
+            <div class="target-corners">
+                <div class="profile-hex">
+                    <img src="https://via.placeholder.com/150" alt="Avatar">
+                </div>
+            </div>
+            <h1 class="glitch-text">07STINKY</h1>
+            <div class="status-indicator">
+                <span class="pulse-dot"></span> SYSTEM ONLINE
+            </div>
+        </main>
+
+        <aside class="panel side-panel">
+            <div class="panel-header"><i class="fas fa-circle"></i> RECENT UPLOADS</div>
+            <div class="panel-body scrollable" id="video-list">
+                <div class="loading-text">Fetching...</div>
+            </div>
+        </aside>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div class="bottom-cta">
+        <a href="https://discord.gg/07stinky" target="_blank" class="discord-btn">
+            <i class="fab fa-discord"></i> JOIN THE DISCORD
+        </a>
+    </div>
+
+    <footer class="ui-footer">
+        <span>C/SYSTEM/STATUS > SECURE</span>
+        <span>© 2026 07STINKY. ALL RIGHTS RESERVED.</span>
+    </footer>
+</div>
